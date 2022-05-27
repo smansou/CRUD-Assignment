@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { updateData, AddData } from '../api/api';
 
 class AddItem extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
-            productName:'',
-            imageURL:'',
-            description:''
+            disabled:false,
+            productName:this.props.editName,
+            imageURL:this.props.editImage,
+            description:this.props.editInfo
         }
     }
+
 
     handleChange = (event) => {
         const value = event.target.value;
@@ -18,8 +20,9 @@ class AddItem extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        this.setState({disabled: true})
         const item = {
-            name: this.state.productName ,
+            name: this.state.productName,
             image: this.state.imageURL,
             info: this.state.description
         }
@@ -31,7 +34,7 @@ class AddItem extends Component {
 
 
         return (
-            <form onSubmit={this.handleSubmit} className="ui form">
+        <form onSubmit={this.handleSubmit} className="ui form form-container">
   <div className="field">
     <label>Product Name</label>
     <input 
@@ -39,7 +42,7 @@ class AddItem extends Component {
     name="productName" 
     placeholder="Product Name"
     onChange={this.handleChange}
-    value={this.props.editName}
+    value={this.state.productName || ''}
     />
 
   </div>
@@ -50,7 +53,7 @@ class AddItem extends Component {
     name="imageURL" 
     placeholder="URL"
     onChange={this.handleChange}
-    value={this.props.editImage}
+    value={this.state.imageURL || ''}
 
     />
   </div>
@@ -63,13 +66,13 @@ class AddItem extends Component {
     name="description" 
     placeholder="Enter Product Description"
     onChange={this.handleChange}
-    value={this.props.editInfo}
+    value={this.state.description || ''}
 
     />
   </div>
   <div className="field">
   </div>
-  <button className="ui button" type="submit">Submit</button>
+  <button className="ui button" type="submit" disabled={this.state.disabled}>Submit</button>
 </form>
         );
     }

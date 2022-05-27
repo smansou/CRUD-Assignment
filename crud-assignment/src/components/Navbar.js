@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
         return (
             <div className="ui attached stackable menu">
   <div className="ui container">
-    <a className="item">
+    <Link to={"/"} className="item">
       <i className="home icon"></i> Home
-    </a>
-    <a className="item">
+    </Link>
+    <Link to={"/products"} className="item">
       <i className="grid layout icon"></i> Products
-    </a>
-    <a className="item">
+    </Link>
+    <Link to={"/addItem"} className="item">
       <i className="add icon"></i> Add Item
-    </a>
+    </Link>
     </div>
     <div className="right item">
       <div className="ui input">

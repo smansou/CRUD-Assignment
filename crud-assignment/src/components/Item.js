@@ -24,7 +24,7 @@ class Item extends Component {
     render() {
     
         return (
-            <div>
+            <div className='ui container'>
             {
             (this.state.editing) ?
                 <>
@@ -34,9 +34,9 @@ class Item extends Component {
                 : 
                 <div className='ui medium rounded image'>
                    <label>{this.props.name}</label>
-                   <img src={this.props.image}></img>
-                   <div className='ui raised segment'>{this.props.info}</div>
-                   <div className='ui '>  
+                   <img  src={this.props.image}></img>
+                   <div className='ui segment'>{this.props.info}</div>
+                   <div className='ui container '>  
                     <button className='ui red button' onClick={this.props.deleteFunc} >Delete</button>
                     <button className='ui grey button' onClick={this.handleEdit} >Edit</button>
                     </div>
