@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(214, 214, 214, 0.315);
 }
 
 code {
@@ -14,8 +15,9 @@ code {
 
 .products-container{
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
 }
+
 .middle-div{
   position: absolute;
 left: 50%;
@@ -27,4 +29,49 @@ padding: 120px 10px ;
 
 .form-container{
   margin: auto 0;
+}
+
+.fff{
+  width: 70%;
+  margin: 20vh auto;
+}
+
+.btn-menu{
+  width: 100%;
+  display: flex;
+align-items: center;
+}
+
+.btns{
+width: 30%;
+display: inline-flex;
+
+
+}
+
+.item-container{
+margin: 15px;
+padding-left: 15px;
+padding-top: 7px;
+border: 1px solid rgba(0, 0, 0, 0.126);
+border-radius: 5px;
+box-shadow: 0.2px 0.2px 2px 0.1px rgba(0, 0, 0, 0.288) ;
+height: 450px;
+
+}
+
+.edit-item{
+  /* display: flex; */
+  padding: 20px 5px;
+}
+.x-icon
+{
+  text-size-adjust: 5px;
+  position: relative;
+  transform: translateX(230px);
+}
+.x-icon:hover
+{
+
+  color: rgb(255, 0, 0);
 }

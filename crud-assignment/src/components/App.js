@@ -8,6 +8,7 @@ import Products from './Products';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import AddItem from './AddItem';
 import Homepage from './Homepage';
+import AddItemPage from './AddItemPage';
 
 class App extends Component {
     constructor(props) {
@@ -25,7 +26,7 @@ class App extends Component {
                 <BrowserRouter>
                 <Navbar />
                 <Route path={"/products"} exact component={Products}/>
-                <Route path={"/addItem"} exact component={AddItem}/>
+                <Route path={"/addItem"} exact component={AddItemPage}/>
                 <Route path={"/"} exact component={Homepage}/>
                 </BrowserRouter>
                 

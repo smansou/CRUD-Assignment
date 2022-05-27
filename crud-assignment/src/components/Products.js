@@ -25,7 +25,7 @@ class Products extends Component {
     showData = () => {
         return this.state.items.map((item, i) => {
             return (
-                <div className='ui segment'>
+                <div key={i} className='ui'>
                     <Item 
                     key={i} 
                     name={item.name} 

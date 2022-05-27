@@ -5,7 +5,7 @@ class AddItem extends Component {
     constructor(props){
         super(props);
         this.state={
-            disabled:false,
+            disabled:true,
             productName:this.props.editName,
             imageURL:this.props.editImage,
             description:this.props.editInfo
@@ -15,10 +15,10 @@ class AddItem extends Component {
 
     handleChange = (event) => {
         const value = event.target.value;
-        this.setState({...this.state, [event.target.name]: value})
+        this.setState({...this.state, [event.target.name]: value, disabled: false})
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault();
         this.setState({disabled: true})
         const item = {
@@ -26,7 +26,7 @@ class AddItem extends Component {
             image: this.state.imageURL,
             info: this.state.description
         }
-        AddData(item);
+       updateData(this.props.iid, item);
     }
 
 
