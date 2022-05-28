@@ -38,8 +38,7 @@ class Item extends Component {
                             <div className='ui segment'>{this.props.info}</div>
                             <div class="ui compact menu btn-menu">
                                 <div class="ui simple dropdown item btn-menu">
-                                    Dropdown
-                                    <i class="dropdown icon"></i>
+                                    Edit                                    <i class="dropdown icon"></i>
                                     <div class="menu btn-menu">
                                         <div onClick={this.props.deleteFunc} class="ui red button btns">Delete</div>
                                         <div onClick={this.handleEdit} class="ui grey button btns">Edit</div>

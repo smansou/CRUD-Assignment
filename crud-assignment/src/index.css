@@ -40,14 +40,15 @@ padding: 120px 10px ;
   width: 100%;
   display: flex;
 align-items: center;
+justify-content: space-between;
 }
 
 .btns{
-width: 30%;
-display: inline-flex;
+width: 142px;
 
 
 }
+
 
 .item-container{
 margin: 15px;
