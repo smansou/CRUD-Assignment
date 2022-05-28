@@ -5,7 +5,7 @@ class Spinner extends Component {
         return (
             <div className="ui">
             <div className="ui active inverted dimmer">
-              <div className="ui small text loader">Loading</div>
+              <div className="ui huge text loader">Loading</div>
             </div>
             <p></p>
           </div>
