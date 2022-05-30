@@ -19,12 +19,15 @@ code {
 }
 
 .middle-div{
+  height: 50% ;
+  width: 50%;
   position: absolute;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 border: 5px solid #242424;
-padding: 120px 10px ;
+padding:  50px 10px ;
+
 }
 
 .form-container{
@@ -36,18 +39,52 @@ padding: 120px 10px ;
   margin: 20vh auto;
 }
 
-.btn-menu{
-  width: 100%;
+.flex-wrapper{
+
+  height: 100%;
   display: flex;
-align-items: center;
-justify-content: space-between;
+  flex-direction: column;
+
 }
+.btn-menu{
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+
+}
+@keyframes fade {
+  from {opacity:0}
+  to {opacity: 100}
+}
+
+/* The element to apply the animation to */
+
+
 
 .btns{
-width: 142px;
-
-
+height: 16.1vh;
+width: 298px;
+text-align: center;
+border: 1px solid rgb(212, 210, 210);
+background-color: #e7dddde9;
+padding: 45px;
+font-weight: 700;
+font-size: 1rem;
+color: #333;
+cursor: pointer;
 }
+.btn-menu:hover{
+ 
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.btns:hover{
+  background-color: #c1c0c0e8;
+}
+
+
 
 
 .item-container{
@@ -60,6 +97,12 @@ box-shadow: 0.2px 0.2px 2px 0.1px rgba(0, 0, 0, 0.288) ;
 height: 450px;
 
 }
+.item-image{
+
+  position: relative;
+  width: 100%;
+}
+
 
 .edit-item{
   /* display: flex; */
@@ -75,3 +118,19 @@ height: 450px;
 
   color: rgb(255, 0, 0);
 }
+
+.item-inner-container-not-editing{
+  height: 100%;
+  padding: 5px;
+  padding-right: 19px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ui.segment{
+  height: 50%;
+  margin: 0;
+padding: 10px;
+}
+

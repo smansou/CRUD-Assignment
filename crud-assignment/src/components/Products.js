@@ -13,6 +13,8 @@ class Products extends Component {
             items: []
         }
     }
+    reRender = () =>{this.setState({renders: 1});}
+    
     async componentDidMount() {
         try {
             const { data } = await getAllData();
@@ -22,10 +24,12 @@ class Products extends Component {
         }
     }
 
+    
+
     showData = () => {
         return this.state.items.map((item, i) => {
             return (
-                <div key={i} className='ui'>
+                <div key={i} className='item-div'>
                     <Item 
                     key={i} 
                     name={item.name} 

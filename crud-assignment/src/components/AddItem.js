@@ -26,8 +26,13 @@ class AddItem extends Component {
             image: this.state.imageURL,
             info: this.state.description
         }
-       updateData(this.props.iid, item);
+       updateData(this.props.iid, item).then(()=>window.location.reload(false));  //!replace
+       this.setState({name: item.name, image: item.image, info: item.info})
+       
+  
+    
     }
+ 
 
 
     render() {

@@ -9,7 +9,8 @@ export function getAllData(){
 
 
 export function updateData(id, body){
-     axios.put(`https://628e2ead368687f3e711eca5.mockapi.io/myFakeData/${id}`, body);
+    const res =  axios.put(`https://628e2ead368687f3e711eca5.mockapi.io/myFakeData/${id}`, body);
+     return res;
 }
 export function AddData(body){
      axios.post(`https://628e2ead368687f3e711eca5.mockapi.io/myFakeData/`, body);
